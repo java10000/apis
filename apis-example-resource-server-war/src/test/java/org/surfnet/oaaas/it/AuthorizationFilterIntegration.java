@@ -31,7 +31,8 @@ public class AuthorizationFilterIntegration {
   public void testCallIndexPage() throws Exception {
     URL url = new URL(this.baseUrl);
     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-    connection.setRequestProperty("Authorization", "bearer 74eccf5f-0995-4e1c-b08c-d05dd5a0f89b");
+//    connection.setRequestProperty("Authorization", "bearer 74eccf5f-0995-4e1c-b08c-d05dd5a0f89b");
+    connection.setRequestProperty("Authorization", "bearer 41127dc5-51e3-4338-ac83-bdb91670d63b");
     connection.connect();
     assertEquals(200, connection.getResponseCode());
     String output = IOUtils.toString(connection.getInputStream());

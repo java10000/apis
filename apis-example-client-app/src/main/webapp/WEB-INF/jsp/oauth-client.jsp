@@ -76,7 +76,7 @@
 											<label class="control-label" for="oauthKey">OAuth key</label>
 											<div class="controls">
 												<form:input path="oauthKey" id="oauthKey" name="oauthKey"
-													class="input-xxlarge" readonly="true"/>
+													class="input-xxlarge" />
 												<p class="help-block">The client must have obtained the key out-of-band during the registration process</p>	
 											</div>
 										</div>
@@ -85,7 +85,7 @@
 												secret</label>
 											<div class="controls">
 												<form:input path="oauthSecret" id="oauthSecret"
-													name="oauthSecret" class="input-xxlarge" readonly="true"/>
+													name="oauthSecret" class="input-xxlarge" />
 												<p class="help-block">The secret (normally an UUID) is also out-of-band obtained by the client during the registration process</p>	
 											</div>
 										</div>
@@ -97,7 +97,7 @@
 												<div class="controls">
 													<form:input path="accessTokenEndPoint"
 														id="accessTokenEndPoint" name="accessTokenEndPoint"
-														class="input-xxlarge" readonly="true"/>
+														class="input-xxlarge" />
 												<p class="help-block">The access token endpoint of the Authorization server</p>	
 												</div>
 											</div>
@@ -107,7 +107,7 @@
 												URL</label>
 											<div class="controls">
 												<form:input path="authorizationURL" id="authorizationURL"
-													name="authorizationURL" class="input-xxlarge" readonly="true"/>
+													name="authorizationURL" class="input-xxlarge" />
 												<p class="help-block">The authorization token endpoint of the Authorization server</p>	
 											</div>
 										</div>
@@ -133,7 +133,7 @@
 										<label class="control-label" for="authorizationURLComplete">Authorization URL</label>
 										<div class="controls break-word">
 											<form:textarea path="authorizationURLComplete" id="authorizationURLComplete" name="authorizationURLComplete"
-												rows="5" class="input-xxlarge" readonly="true"/>
+												rows="5" class="input-xxlarge" />
 											<p class="help-block">This is the URL to redirect to for user authentication. It is based on the authorization url of the Authorization Server and the registered client 
 													in /apis-authorization-server/src/main/resources/db/migration/hsqldb/V1__auth-server-admin.sql</p>	
 										</div>
@@ -159,7 +159,7 @@
 										<label class="control-label" for="accessToken">Access token</label>
 										<div class="controls">
 											<form:input path="accessToken" id="accessToken"
-												name="accessToken" class="input-xxlarge" readonly="true"/>
+												name="accessToken" class="input-xxlarge" value=""/>
 											<p class="help-block">Note: this is the accessToken for
 												all subsequent OAuth queries</p>
 										</div>
