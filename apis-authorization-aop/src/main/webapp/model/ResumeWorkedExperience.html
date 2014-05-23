@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+  <title>Aceona Open Platform</title>  
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/api.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+	<div class="api-content">
+	<div class="doc-hd">
+		简历工作经历
+		<h1>ResumeWorkedExperience</h1>
+	</div>
+	<div class="doc-bd" style="height: 326px; width: 1220px; top: 59px;">
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>所属类目</h2>	
+			</div>
+			<div class="bd">
+               <p>用户API</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>简要描述</h2>	
+			</div>
+			<div class="bd">
+				<p>简历工作经历</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>属性</h2>
+			</div>
+			<div class="bd">
+				<table class="para_table">
+					<thead>
+						<tr>
+						  <th width="15%">名称</th>
+						  <th width="15%">对象属性</th>
+                          <th width="10%">类型</th>
+                          <th width="10%">是否隐私</th>
+                          <th width="20%">示例值</th>
+                          <th width="30%">描述</th>
+						</tr>
+					</thead>
+					<tbody>
+                         <tr  class="">
+							<td>id</td>
+							<td>id</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>主键</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_time</td>
+							<td>dateAdded</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>创建时间</td>
+						</tr>
+                         <tr  class="">
+							<td>update_time</td>
+							<td>lastModified</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>修改时间</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_by</td>
+							<td>createBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>创建人</td>
+						</tr>
+                         <tr  class="">
+							<td>update_by</td>
+							<td>lastModifyBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>修改人</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resume_id</td>
+							<td>resumeId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历ID</td>
+						</tr>
+                         <tr  class="">
+							<td>from_year</td>
+							<td>fromYear</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>起始年份</td>
+						</tr>
+                         <tr  class="odd">
+							<td>from_month</td>
+							<td>fromMonth</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>起始月份</td>
+						</tr>
+                         <tr  class="">
+							<td>to_year</td>
+							<td>toYear</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>结束年份</td>
+						</tr>
+                         <tr  class="odd">
+							<td>to_month</td>
+							<td>toMonth</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>结束月份</td>
+						</tr>
+                         <tr  class="">
+							<td>corp_name</td>
+							<td>corpName</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>公司名称</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corp_type_id</td>
+							<td>corpTypeId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业类型ID</td>
+						</tr>
+                         <tr  class="">
+							<td>corpType</td>
+							<td>corpType</td>
+			                  <td><a href="DicCorpType.html">DicCorpType</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业类型</td>
+						</tr>
+                         <tr  class="odd">
+							<td>employe_dep</td>
+							<td>employeDep</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>任职部门</td>
+						</tr>
+                         <tr  class="">
+							<td>job_name_id</td>
+							<td>jobNameId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>职位名称ID(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>jobName</td>
+							<td>jobName</td>
+			                  <td><a href="DicJobName.html">DicJobName</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>职位名称(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="">
+							<td>other_job_name</td>
+							<td>otherJobName</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>其它职位名称</td>
+						</tr>
+                         <tr  class="odd">
+							<td>area_id</td>
+							<td>areaId</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>城市ID</td>
+						</tr>
+                         <tr  class="">
+							<td>city</td>
+							<td>city</td>
+			                  <td><a href="DicArea.html">DicArea</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>城市信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>work_description</td>
+							<td>workDescription</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作情况描述</td>
+						</tr>
+                         <tr  class="">
+							<td>corp_domain_id</td>
+							<td>corpDomainId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业所属行业ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corpDomain</td>
+							<td>corpDomain</td>
+			                  <td><a href="DicDomain.html">DicDomain</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业所属行业</td>
+						</tr>
+                         <tr  class="">
+							<td>corp_size_id</td>
+							<td>corpSizeId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业规模ID(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corpSize</td>
+							<td>corpSize</td>
+			                  <td><a href="DicCorpSize.html">DicCorpSize</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业规模(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="">
+							<td>certificate_honor</td>
+							<td>certificateHonor</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>证书及荣誉(以废弃)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>manage_experience</td>
+							<td>manageExperience</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>管理经验(以废弃)</td>
+						</tr>
+                         <tr  class="">
+							<td>project_experience</td>
+							<td>projectExperience</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>项目经验</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corp_profile</td>
+							<td>corpProfile</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>公司背景</td>
+						</tr>
+                         <tr  class="">
+							<td>is_credit_people</td>
+							<td>isCreditPeople</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否录入征信人(以废弃)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resumeCreditPeopleInfos</td>
+							<td>resumeCreditPeopleInfos</td>
+			                  <td><a href="ResumeCreditPeopleInfo.html">java.util.List&lt;ResumeCreditPeopleInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>征信人信息(以废弃)</td>
+						</tr>
+                         <tr  class="">
+							<td>is_deleted</td>
+							<td>isDeleted</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否删除</td>
+						</tr>
+                         <tr  class="odd">
+							<td>report_line</td>
+							<td>reportLine</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>汇报对象</td>
+						</tr>
+                         <tr  class="">
+							<td>subordinate_num</td>
+							<td>subordinateNum</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>下属人数</td>
+						</tr>
+                         <tr  class="odd">
+							<td>achievement</td>
+							<td>achievement</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作业绩</td>
+						</tr>
+                       </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</body>
+		</html>

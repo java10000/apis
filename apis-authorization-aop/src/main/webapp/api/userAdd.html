@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Aceona Open Platform</title>
+		<link href="/css/main.css" rel="stylesheet" type="text/css" />
+		<link href="/css/api.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.cache.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			$(function() {
+				 //$('#xml').text($('#xmlC').html());
+				
+				 jQuery.syntax();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="api-content">
+			<div class="doc-content apitype">
+				<div class="doc-hd">
+					用户API
+					<h1 class="level-1">
+						<b></b> aceona.user.add 添加单个用户
+					</h1>
+					
+				</div>
+				<div class="doc-bd" style="height: 296px; width: 1220px; top: 89px;">
+					
+					<div class="section">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_des">
+								<span class="handle"></span>简要描述
+							</h2>
+						</div>
+						<div class="bd">
+							<p>
+								添加单个用户
+							</p>
+						</div>
+					</div>
+					<div class="section" id="sysparams">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_sysparam">
+								<span class="handle"></span>系统级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table border="1" class="para_table">
+								<thead>
+									<tr>
+										<th>
+											名称
+										</th>
+										<th>
+											类型
+										</th>
+										<th>
+											是否必需
+										</th>
+										<th>
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											method
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											API接口名称
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											timestamp
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2008-01-25
+											20:23:30。
+										</td>
+									</tr>
+									<tr>
+										<td>
+											format
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											否
+										</td>
+										<td>
+											可选，指定响应格式。默认json,目前支持格式为xml,json
+										</td>
+									</tr>
+									<tr>
+										<td>
+											app_key
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的AppKey
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											sign
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的授权密钥
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_appparam">
+								<span class="handle"></span>应用级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="15%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="25%">
+											描述
+										</th>
+										<th width="15%">
+											示例值
+										</th>
+										<th width="15%">
+											默认值
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>user</td><td><a href="/model/User.html">User</a></td><td>必须</td><td>User实体类</td><td></td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>返回结果
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="20%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="20%">
+											示例值
+										</th>
+										<th width="30%">
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											user_Id
+										</td>
+										<td>
+											Long
+										</td>
+										<td>
+											是
+										</td>
+										<td></td>
+										<td>
+											用户信息
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>Java调用代码
+							</h2>
+						</div>
+						<div class="bd">
+							<pre class="syntax brush-java">
+		AceonaClient client = new DefaultAceonaClient(Constants.AOP_SERVER_URL,"aceoner","SH!!!!!!!!!!!!!!!!");
+		UserAddRequest req = new UserAddRequest();
+		User user = new User();
+		user.setLastModified(new Date());
+		List<UserAccount> uas = new ArrayList<UserAccount>();
+		UserAccount ua = new UserAccount();		
+		//ua.setId(1L); 
+		ua.setLastLoginIp(9999999);
+		ua.setLoginName("56@qq.com");
+		ua.setLastLoginTime(new Date());
+		ua.setPassword("OK");
+		
+		UserAccount ua2 = new UserAccount();		
+		//ua2.setId(2L); 
+		ua2.setLastLoginIp(199292922);
+		ua2.setLoginName("中国人");
+		ua2.setLastLoginTime(new Date());
+		ua2.setPassword("OK");
+		
+		uas.add(ua);
+		uas.add(ua2);
+		user.setAccounts(uas);
+		//req.setUserId(1L);		
+		req.setUser(user);
+		try {
+			UserAddResponse res = client.execute(req);
+			System.out.println(res.getUserId());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+							</pre>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_example">
+								<span class="handle"></span>返回示例
+							</h2>
+						</div>
+						<div class="bd">
+							<div class="code-section">
+								<strong>XML数据格式: </strong>
+								
+									<pre id="xml" class="syntax xml">
+<pre id="xml" class="syntax xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;UserAddResponse&gt;&lt;user_id&gt;1&lt;/user_id&gtl;&lt;/UserAddResponse&gt;
+
+				</pre>
+							</div>
+							<div class="code-section">
+								<strong>JSON数据格式: </strong>
+								<pre class="syntax brush-bash">
+								{"UserAddResponse":{"user_id":1}}
+
+								</pre>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

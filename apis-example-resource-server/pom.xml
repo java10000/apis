@@ -76,6 +76,12 @@
       <artifactId>jersey-json</artifactId>
     </dependency>
 
+    <dependency>
+		<groupId>com.varicom.api</groupId>
+		<artifactId>account-sdk</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    
   </dependencies>
 
   <build>

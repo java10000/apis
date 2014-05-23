@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--Basic application beans.-->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/v1">eSBController</prop>
+				<prop key="/oauth/loadWADL">loadWADLController</prop>
+			</props>
+		</property>
+		<property name="alwaysUseFullPath" value="true" />
+	</bean>
+
+
+
+	<bean id="eSBController" class="com.varicom.aop.ESBController">
+		<property name="resourceCache">
+			<ref local="resourceCache" />
+		</property>
+	</bean>
+	
+	<bean id="loadWADLController" class="com.varicom.aop.LoadWADLController">
+		<property name="resourceCache">
+			<ref local="resourceCache" />
+		</property>
+	</bean>
+
+	<bean id="resourceCache" class="com.varicom.aop.resource.ResourceCache" init-method="init">
+		<property name="wadlUrls">
+			<list>
+				<value>http://172.19.1.104:8010/uc/rest/application.wadl</value>
+<!--				<value>http://172.19.4.191:8080/rest/application.wadl</value>-->
+<!-- 				<value>http://172.19.4.10:8080/acl/rest/application.wadl</value> -->
+			</list>
+		</property>
+		<property name="applicationLocalFilePath" value="D:/applicationLocalFilePath"></property>
+	</bean>
+
+</beans>

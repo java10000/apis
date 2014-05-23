@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+  <title>Aceona Open Platform</title>  
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/api.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+	<div class="api-content">
+	<div class="doc-hd">
+		用户表
+		<h1>User</h1>
+	</div>
+	<div class="doc-bd" style="height: 326px; width: 1220px; top: 59px;">
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>所属类目</h2>	
+			</div>
+			<div class="bd">
+               <p>用户API</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>简要描述</h2>	
+			</div>
+			<div class="bd">
+				<p>用户表</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>属性</h2>
+			</div>
+			<div class="bd">
+				<table class="para_table">
+					<thead>
+						<tr>
+						  <th width="15%">名称</th>
+						  <th width="15%">对象属性</th>
+                          <th width="10%">类型</th>
+                          <th width="10%">是否隐私</th>
+                          <th width="20%">示例值</th>
+                          <th width="30%">描述</th>
+						</tr>
+					</thead>
+					<tbody>
+                         <tr  class="">
+							<td>id</td>
+							<td>id</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>主键</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_time</td>
+							<td>dateAdded</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>创建时间</td>
+						</tr>
+                         <tr  class="">
+							<td>update_time</td>
+							<td>lastModified</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>修改时间</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_by</td>
+							<td>createBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>创建人</td>
+						</tr>
+                         <tr  class="">
+							<td>update_by</td>
+							<td>lastModifyBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>修改人</td>
+						</tr>
+                         <tr  class="odd">
+							<td>user_type</td>
+							<td>userType</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员类型</td>
+						</tr>
+                         <tr  class="">
+							<td>status_id</td>
+							<td>statusId</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员状态ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>accounts</td>
+							<td>accounts</td>
+			                  <td><a href="UserAccount.html">java.util.List&lt;UserAccount&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员账户列表</td>
+						</tr>
+                         <tr  class="">
+							<td>baseInfos</td>
+							<td>baseInfos</td>
+			                  <td><a href="UserBaseInfo.html">java.util.List&lt;UserBaseInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员基本信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>infos</td>
+							<td>infos</td>
+			                  <td><a href="UserInfo.html">java.util.List&lt;UserInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员信息</td>
+						</tr>
+                         <tr  class="">
+							<td>corpLangInfos</td>
+							<td>corpLangInfos</td>
+			                  <td><a href="UserCorpInfoLang.html">java.util.List&lt;UserCorpInfoLang&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业会员语言相关信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corpInfo</td>
+							<td>corpInfo</td>
+			                  <td><a href="UserCorpInfo.html">UserCorpInfo</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业会员信息</td>
+						</tr>
+                         <tr  class="">
+							<td>corpCantactInfos</td>
+							<td>corpCantactInfos</td>
+			                  <td><a href="UserCorpContactInfo.html">java.util.List&lt;UserCorpContactInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>企业会员联系信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>messengers</td>
+							<td>messengers</td>
+			                  <td><a href="UserInstantMessenger.html">java.util.List&lt;UserInstantMessenger&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户即时通讯列表</td>
+						</tr>
+                         <tr  class="">
+							<td>userManagerInfo</td>
+							<td>userManagerInfo</td>
+			                  <td> com.aceona.api.model.UserManagerInfo</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>管理用户信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>userManagerContactInfo</td>
+							<td>userManagerContactInfo</td>
+			                  <td><a href="UserManagerContactInfo.html">UserManagerContactInfo</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>管理员用户联系信息</td>
+						</tr>
+                         <tr  class="">
+							<td>privacies</td>
+							<td>privacies</td>
+			                  <td><a href="UserPrivacy.html">java.util.List&lt;UserPrivacy&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户隐私信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>profiles</td>
+							<td>profiles</td>
+			                  <td><a href="UserProfile.html">java.util.List&lt;UserProfile&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户个人信息</td>
+						</tr>
+                         <tr  class="">
+							<td>tags</td>
+							<td>tags</td>
+			                  <td><a href="UserTag.html">java.util.List&lt;UserTag&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户标签</td>
+						</tr>
+                         <tr  class="odd">
+							<td>thirdParties</td>
+							<td>thirdParties</td>
+			                  <td><a href="UserThirdParty.html">java.util.List&lt;UserThirdParty&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>第三方账户列表</td>
+						</tr>
+                         <tr  class="">
+							<td>addresses</td>
+							<td>addresses</td>
+			                  <td><a href="UserAddress.html">java.util.List&lt;UserAddress&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户地址</td>
+						</tr>
+                         <tr  class="odd">
+							<td>professionInfos</td>
+							<td>professionInfos</td>
+			                  <td><a href="UserProfessionInfo.html">java.util.List&lt;UserProfessionInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>专业用户信息</td>
+						</tr>
+                         <tr  class="">
+							<td>is_deleted</td>
+							<td>deleted</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>删除标记位</td>
+						</tr>
+                         <tr  class="odd">
+							<td>roles</td>
+							<td>roles</td>
+			                  <td><a href="Role.html">java.util.List&lt;Role&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>角色列表</td>
+						</tr>
+                         <tr  class="">
+							<td>regist_ip</td>
+							<td>registIP</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>注册IP</td>
+						</tr>
+                         <tr  class="odd">
+							<td>account_enabled</td>
+							<td>enabled</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户是否启用</td>
+						</tr>
+                         <tr  class="">
+							<td>account_expired</td>
+							<td>accountExpired</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户是否过期</td>
+						</tr>
+                         <tr  class="odd">
+							<td>account_locked</td>
+							<td>accountLocked</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户是否锁定</td>
+						</tr>
+                         <tr  class="">
+							<td>credentials_expired</td>
+							<td>credentialsExpired</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>证书是否过期</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resumes</td>
+							<td>resumes</td>
+			                  <td><a href="Resume.html">java.util.List&lt;Resume&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>会员简历信息</td>
+						</tr>
+                       </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</body>
+		</html>

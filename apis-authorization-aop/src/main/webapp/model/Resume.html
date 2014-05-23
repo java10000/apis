@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+  <title>Aceona Open Platform</title>  
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/api.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+	<div class="api-content">
+	<div class="doc-hd">
+		简历表
+		<h1>Resume</h1>
+	</div>
+	<div class="doc-bd" style="height: 326px; width: 1220px; top: 59px;">
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>所属类目</h2>	
+			</div>
+			<div class="bd">
+               <p>用户API</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>简要描述</h2>	
+			</div>
+			<div class="bd">
+				<p>简历表</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>属性</h2>
+			</div>
+			<div class="bd">
+				<table class="para_table">
+					<thead>
+						<tr>
+						  <th width="15%">名称</th>
+						  <th width="15%">对象属性</th>
+                          <th width="10%">类型</th>
+                          <th width="10%">是否隐私</th>
+                          <th width="20%">示例值</th>
+                          <th width="30%">描述</th>
+						</tr>
+					</thead>
+					<tbody>
+                         <tr  class="">
+							<td>id</td>
+							<td>id</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>主键</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_time</td>
+							<td>dateAdded</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>创建时间</td>
+						</tr>
+                         <tr  class="">
+							<td>update_time</td>
+							<td>lastModified</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>修改时间</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_by</td>
+							<td>createBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>创建人</td>
+						</tr>
+                         <tr  class="">
+							<td>update_by</td>
+							<td>lastModifyBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>修改人</td>
+						</tr>
+                         <tr  class="odd">
+							<td>user_id</td>
+							<td>userId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户ID,(注：该字段不支持查询，查询请使用"user.id")</td>
+						</tr>
+                         <tr  class="">
+							<td>resume_code</td>
+							<td>resumeCode</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历编码</td>
+						</tr>
+                         <tr  class="odd">
+							<td>hometown_id</td>
+							<td>hometownId</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>籍贯(为空字符时表示未选择)</td>
+						</tr>
+                         <tr  class="">
+							<td>hometown</td>
+							<td>hometown</td>
+			                  <td><a href="DicArea.html">DicArea</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>出生地</td>
+						</tr>
+                         <tr  class="odd">
+							<td>hometownProvince</td>
+							<td>hometownProvince</td>
+			                  <td><a href="DicArea.html">DicArea</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>出生地省份</td>
+						</tr>
+                         <tr  class="">
+							<td>address</td>
+							<td>address</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>通讯地址</td>
+						</tr>
+                         <tr  class="odd">
+							<td>begin_work_date</td>
+							<td>beginWorkDate</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>开始工作时间</td>
+						</tr>
+                         <tr  class="">
+							<td>first_major</td>
+							<td>firstMajor</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>最高学历主修专业(以废弃)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>second_major</td>
+							<td>secondMajor</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>第二主修专业(以废弃)</td>
+						</tr>
+                         <tr  class="">
+							<td>last_diploma_id</td>
+							<td>lastDiplomaId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>最高学历ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>diploma</td>
+							<td>diploma</td>
+			                  <td><a href="DicDiploma.html">DicDiploma</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>最高学历</td>
+						</tr>
+                         <tr  class="">
+							<td>unqualified_reason_id</td>
+							<td>unqualifiedReasonId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>不合格原因ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>unqualifiedReason</td>
+							<td>unqualifiedReason</td>
+			                  <td><a href="DicUnqualifiedReason.html">DicUnqualifiedReason</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>不合格原因</td>
+						</tr>
+                         <tr  class="">
+							<td>other_unqualified_reason</td>
+							<td>otherUnqualifiedReason</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>其他不合格原因</td>
+						</tr>
+                         <tr  class="odd">
+							<td>certification</td>
+							<td>certification</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>证照</td>
+						</tr>
+                         <tr  class="">
+							<td>desired_salary_id</td>
+							<td>desiredSalaryId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>期望薪资ID(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>desiredSalary</td>
+							<td>desiredSalary</td>
+			                  <td><a href="DicSalary.html">DicSalary</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>期望薪资(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="">
+							<td>current_salary_id</td>
+							<td>currentSalaryId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>目前薪资ID(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>currentSalary</td>
+							<td>currentSalary</td>
+			                  <td><a href="DicSalary.html">DicSalary</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>当前薪资(id为-1时表示未选择，对象返回空)</td>
+						</tr>
+                         <tr  class="">
+							<td>self_assessment</td>
+							<td>selfAssessment</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>自我评价</td>
+						</tr>
+                         <tr  class="odd">
+							<td>language_id</td>
+							<td>languageId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>语言ID</td>
+						</tr>
+                         <tr  class="">
+							<td>language</td>
+							<td>language</td>
+			                  <td><a href="Language.html">Language</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>语言</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resume_source_id</td>
+							<td>resumeSourceId</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>1,后台直接录入，2，hr批量推荐，3 前台个人上传简历 4，前台个人填写 5，推荐线索 6 ,通过职位推荐简历  7通讯录， 8智联外部导入， 9前程外部导入 ，10人才热线外部导入，11英才外部导入 </td>
+						</tr>
+                         <tr  class="">
+							<td>source_code</td>
+							<td>sourceCode</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>来源编号</td>
+						</tr>
+                         <tr  class="odd">
+							<td>status_id</td>
+							<td>statusId</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历状态ID 0：待审核  1：合格</td>
+						</tr>
+                         <tr  class="">
+							<td>user_name</td>
+							<td>userName</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户名</td>
+						</tr>
+                         <tr  class="odd">
+							<td>other_intent</td>
+							<td>otherIntent</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>其它意向(以废弃)</td>
+						</tr>
+                         <tr  class="">
+							<td>sex_id</td>
+							<td>sexId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>性别ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>sex</td>
+							<td>sex</td>
+			                  <td><a href="DicSex.html">DicSex</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>性别信息</td>
+						</tr>
+                         <tr  class="">
+							<td>birthdate</td>
+							<td>birthdate</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>出生日期</td>
+						</tr>
+                         <tr  class="odd">
+							<td>area_id</td>
+							<td>areaId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>城市ID</td>
+						</tr>
+                         <tr  class="">
+							<td>city</td>
+							<td>city</td>
+			                  <td><a href="DicArea.html">DicArea</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>城市信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>province</td>
+							<td>province</td>
+			                  <td><a href="DicArea.html">DicArea</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>省份信息</td>
+						</tr>
+                         <tr  class="">
+							<td>nation_id</td>
+							<td>nationId</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>国家ID(为空字符时表示未选择)</td>
+						</tr>
+                         <tr  class="odd">
+							<td>nation</td>
+							<td>nation</td>
+			                  <td><a href="DicNation.html">DicNation</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>国家</td>
+						</tr>
+                         <tr  class="">
+							<td>working_years_id</td>
+							<td>workingYearsId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作年限ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>workingYears</td>
+							<td>workingYears</td>
+			                  <td><a href="DicWorkingYears.html">DicWorkingYears</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作年限</td>
+						</tr>
+                         <tr  class="">
+							<td>overseas_work_exp</td>
+							<td>overseasWorkExp</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否有海外工作经验 0:无 ,1:有</td>
+						</tr>
+                         <tr  class="odd">
+							<td>is_married</td>
+							<td>isMarried</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>婚姻状况 1:已婚 0：未婚</td>
+						</tr>
+                         <tr  class="">
+							<td>resume_upload_user_id</td>
+							<td>resumeUploadUserId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历上传用户ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>is_default</td>
+							<td>isDefault</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否默认简历 1(true) 默认 0(false) 非默认</td>
+						</tr>
+                         <tr  class="">
+							<td>head_img_path</td>
+							<td>headImgPath</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>头像路径</td>
+						</tr>
+                         <tr  class="odd">
+							<td>img_server_id</td>
+							<td>imgServerId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>头像服务器ID</td>
+						</tr>
+                         <tr  class="">
+							<td>imgServer</td>
+							<td>imgServer</td>
+			                  <td><a href="Config.html">Config</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>头像服务器</td>
+						</tr>
+                         <tr  class="odd">
+							<td>is_deleted</td>
+							<td>isDeleted</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否删除</td>
+						</tr>
+                         <tr  class="">
+							<td>is_passive_register</td>
+							<td>isPassiveRegister</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>是否被动注册 0、否 1、是</td>
+						</tr>
+                         <tr  class="odd">
+							<td>for_job_status</td>
+							<td>forJobStatus</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>求职状态 1、正在求职 2、暂不求职 3、目前在职，考虑换个新环境</td>
+						</tr>
+                         <tr  class="">
+							<td>contactInfos</td>
+							<td>contactInfos</td>
+			                  <td><a href="ResumeContactInfo.html">java.util.List&lt;ResumeContactInfo&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历联系信息</td>
+						</tr>
+                         <tr  class="odd">
+							<td>evaluates</td>
+							<td>evaluates</td>
+			                  <td><a href="ResumeEvaluate.html">java.util.List&lt;ResumeEvaluate&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历人才评估</td>
+						</tr>
+                         <tr  class="">
+							<td>educations</td>
+							<td>educations</td>
+			                  <td><a href="ResumeEducation.html">java.util.List&lt;ResumeEducation&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>教育经历</td>
+						</tr>
+                         <tr  class="odd">
+							<td>workedExperiences</td>
+							<td>workedExperiences</td>
+			                  <td><a href="ResumeWorkedExperience.html">java.util.List&lt;ResumeWorkedExperience&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作经历</td>
+						</tr>
+                         <tr  class="">
+							<td>resumeIntentAreaMaps</td>
+							<td>resumeIntentAreaMaps</td>
+			                  <td><a href="ResumeIntentAreaMap.html">java.util.List&lt;ResumeIntentAreaMap&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作意向地</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resumeIntentDomainMaps</td>
+							<td>resumeIntentDomainMaps</td>
+			                  <td><a href="ResumeIntentDomainMap.html">java.util.List&lt;ResumeIntentDomainMap&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作意向行业</td>
+						</tr>
+                         <tr  class="">
+							<td>resumeIntentPositionMaps</td>
+							<td>resumeIntentPositionMaps</td>
+			                  <td><a href="ResumeIntentPositionMap.html">java.util.List&lt;ResumeIntentPositionMap&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作意向职位</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resumeLanguageAbilitys</td>
+							<td>resumeLanguageAbilitys</td>
+			                  <td><a href="ResumeLanguageAbility.html">java.util.List&lt;ResumeLanguageAbility&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历语言能力</td>
+						</tr>
+                         <tr  class="">
+							<td>resumeSkills</td>
+							<td>resumeSkills</td>
+			                  <td><a href="ResumeSkill.html">java.util.List&lt;ResumeSkill&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>专业技能</td>
+						</tr>
+                         <tr  class="odd">
+							<td>resumeTrainings</td>
+							<td>resumeTrainings</td>
+			                  <td><a href="ResumeTraining.html">java.util.List&lt;ResumeTraining&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>简历培训经历</td>
+						</tr>
+                       </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</body>
+		</html>

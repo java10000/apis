@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Aceona Open Platform</title>
+		<link href="/css/main.css" rel="stylesheet" type="text/css" />
+		<link href="/css/api.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.cache.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			$(function() {
+				 //$('#xml').text($('#xmlC').html());
+				
+				 jQuery.syntax();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="api-content">
+			<div class="doc-content apitype">
+				<div class="doc-hd">
+					用户API
+					<h1 class="level-1">
+						<b></b> aceona.users.get 获取多个用户信息
+					</h1>
+					
+				</div>
+				<div class="doc-bd" style="height: 296px; width: 1220px; top: 89px;">
+					
+					<div class="section">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_des">
+								<span class="handle"></span>简要描述
+							</h2>
+						</div>
+						<div class="bd">
+							<p>
+								传入多个会员ID返回多个用户信息
+							</p>
+						</div>
+					</div>
+					<div class="section" id="sysparams">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_sysparam">
+								<span class="handle"></span>系统级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table border="1" class="para_table">
+								<thead>
+									<tr>
+										<th>
+											名称
+										</th>
+										<th>
+											类型
+										</th>
+										<th>
+											是否必需
+										</th>
+										<th>
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											method
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											API接口名称
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											timestamp
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2008-01-25
+											20:23:30。
+										</td>
+									</tr>
+									<tr>
+										<td>
+											format
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											否
+										</td>
+										<td>
+											可选，指定响应格式。默认json,目前支持格式为xml,json
+										</td>
+									</tr>
+									<tr>
+										<td>
+											app_key
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的AppKey
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											sign
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的授权密钥
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_appparam">
+								<span class="handle"></span>应用级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="15%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="25%">
+											描述
+										</th>
+										<th width="15%">
+											示例值
+										</th>
+										<th width="15%">
+											默认值
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>userids</td><td>Long</td><td>必须</td><td>用户ID，多个以半角逗号(,)分隔，最多40个</td><td>0L</td><td></td>
+									</tr>
+									<tr>
+										<td>fields</td><td>Long</td><td>必须</td><td>查询字段：User数据结构的公开信息字段列表，以半角逗号(,)分隔  </td><td>account.user_name</td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>返回结果
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="20%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="20%">
+											示例值
+										</th>
+										<th width="30%">
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											user
+										</td>
+										<td>
+											<a href="/model/User.html">User</a>
+										</td>
+										<td>
+											是
+										</td>
+										<td></td>
+										<td>
+											用户信息
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>Java调用代码
+							</h2>
+						</div>
+						<div class="bd">
+							<pre class="syntax brush-java">
+		AceonaClient client = new DefaultAceonaClient(Constants.AOP_SERVER_URL,"aceoner","SH!!!!!!!!!!!!!!!!");
+		UsersGetRequest req = new UsersGetRequest();
+		req.setFields("user1,user2,user3");
+		req.setUserId(1L);
+		
+		try {
+			UsersGetResponse res = (UsersGetResponse) client.execute(req);
+			System.out.println(res.getUsers());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+							</pre>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_example">
+								<span class="handle"></span>返回示例
+							</h2>
+						</div>
+						<div class="bd">
+							<div class="code-section">
+								<strong>XML数据格式: </strong>
+								
+									<pre id="xml" class="syntax xml">
+									&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;UserGetResponse&gt;&lt;user&gt;&lt;id&gt;1&lt;/id&gt;&lt;create_time&gt;2008-07-01 00:00:00&lt;/create_time&gt;&lt;update_time&gt;2011-05-03 14:37:37&lt;/update_time&gt;&lt;create_by&gt;1&lt;/create_by&gt;&lt;update_by&gt;1&lt;/update_by&gt;&lt;user_type&gt;2&lt;/user_type&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;is_enabled&gt;false&lt;/is_enabled&gt;&lt;is_expired&gt;false&lt;/is_expired&gt;&lt;is_locked&gt;false&lt;/is_locked&gt;&lt;accounts&gt;&lt;account&gt;&lt;id&gt;1&lt;/id&gt;&lt;login_name&gt;1aceona@aceona.com&lt;/login_name&gt;&lt;password&gt;jdz/OoD0GJyhydTZAsPJCQ==&lt;/password&gt;&lt;account_type&gt;1&lt;/account_type&gt;&lt;last_login_time&gt;2011-03-31 10:07:22&lt;/last_login_time&gt;&lt;last_login_ip&gt;0&lt;/last_login_ip&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/account&gt;&lt;/accounts&gt;&lt;messengers/&gt;&lt;privacies/&gt;&lt;profiles&gt;&lt;profile&gt;&lt;id&gt;146&lt;/id&gt;&lt;url_path&gt;test1_test1_test1BBB&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;145&lt;/id&gt;&lt;url_path&gt;test1_test1_test1&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;150&lt;/id&gt;&lt;url_path&gt;test1_test1_tes222&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;149&lt;/id&gt;&lt;url_path&gt;test1_test1_test1ccc&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;148&lt;/id&gt;&lt;url_path&gt;test1_test1_test1BBB&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;147&lt;/id&gt;&lt;url_path&gt;test1_test1_test1Bcc&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;154&lt;/id&gt;&lt;url_path&gt;test1_test1_t11DCC&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;153&lt;/id&gt;&lt;url_path&gt;test1_test1_t11DDD&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;152&lt;/id&gt;&lt;url_path&gt;test1_test1_t11121&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;151&lt;/id&gt;&lt;url_path&gt;test1_test1_t111&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;158&lt;/id&gt;&lt;url_path&gt;DDDDDDDDDDDDDDDDDDDD&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;157&lt;/id&gt;&lt;url_path&gt;WWWWWWWWWWWWWWWWWWWW&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;156&lt;/id&gt;&lt;url_path&gt;test1_test1_t11ww&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;155&lt;/id&gt;&lt;url_path&gt;test1_test1_t11DWW&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;159&lt;/id&gt;&lt;url_path&gt;cccccccccccccccccccc&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;160&lt;/id&gt;&lt;url_path&gt;____________________&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;161&lt;/id&gt;&lt;url_path&gt;__________A_________&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;162&lt;/id&gt;&lt;url_path&gt;_______SS_A_________&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;193&lt;/id&gt;&lt;url_path&gt;tom_tom_tom1&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;163&lt;/id&gt;&lt;url_path&gt;_______SS_AAAAAAAAAA&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;164&lt;/id&gt;&lt;url_path&gt;WWWWWWWWWWWWWWWWWWWW&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;113&lt;/id&gt;&lt;url_path&gt;test1&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;profile&gt;&lt;id&gt;114&lt;/id&gt;&lt;url_path&gt;test1_test1&lt;/url_path&gt;&lt;is_deleted&gt;false&lt;/is_deleted&gt;&lt;/profile&gt;&lt;/profiles&gt;&lt;tags/&gt;&lt;third_parties/&gt;&lt;addresses/&gt;&lt;baseInfos&gt;&lt;baseInfo&gt;&lt;id&gt;1&lt;/id&gt;&lt;user_name&gt;test1&lt;/user_name&gt;&lt;sex&gt;1&lt;/sex&gt;&lt;birthdate&gt;1980-02-01 00:00:00&lt;/birthdate&gt;&lt;nation_id&gt;1&lt;/nation_id&gt;&lt;hometown&gt;4403&lt;/hometown&gt;&lt;user_source&gt;0&lt;/user_source&gt;&lt;language&gt;&lt;id&gt;1&lt;/id&gt;&lt;code&gt;CN&lt;/code&gt;&lt;name&gt;简体中文&lt;/name&gt;&lt;/language&gt;&lt;/baseInfo&gt;&lt;/baseInfos&gt;&lt;infos&gt;&lt;info&gt;&lt;id&gt;1&lt;/id&gt;&lt;language&gt;&lt;id&gt;1&lt;/id&gt;&lt;code&gt;CN&lt;/code&gt;&lt;name&gt;简体中文&lt;/name&gt;&lt;/language&gt;&lt;city_id&gt;4403&lt;/city_id&gt;&lt;relationship_status&gt;0&lt;/relationship_status&gt;&lt;mobile&gt;15858585858&lt;/mobile&gt;&lt;current_corp&gt;深圳市埃斯欧纳信息咨询有限公司&lt;/current_corp&gt;&lt;current_post&gt;市场公关总监&lt;/current_post&gt;&lt;head_img_path&gt;&lt;/head_img_path&gt;&lt;img_server_id&gt;0&lt;/img_server_id&gt;&lt;/info&gt;&lt;/infos&gt;&lt;/user&gt;&lt;/UserGetResponse&gt;
+	
+				</pre>
+							</div>
+							<div class="code-section">
+								<strong>JSON数据格式: </strong>
+								<pre class="syntax brush-bash">
+								{"UserGetResponse":{"user":{"id":1,"create_time":"2008-07-01 00:00:00","update_time":"2011-05-03 14:37:37","create_by":1,"update_by":1,"user_type":2,"is_deleted":false,"is_enabled":false,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":1,"login_name":"1aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_time":"2011-03-31 10:07:22","last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":{"profile":[{"id":146,"url_path":"test1_test1_test1BBB","is_deleted":false},{"id":145,"url_path":"test1_test1_test1","is_deleted":false},{"id":150,"url_path":"test1_test1_tes222","is_deleted":false},{"id":149,"url_path":"test1_test1_test1ccc","is_deleted":false},{"id":148,"url_path":"test1_test1_test1BBB","is_deleted":false},{"id":147,"url_path":"test1_test1_test1Bcc","is_deleted":false},{"id":154,"url_path":"test1_test1_t11DCC","is_deleted":false},{"id":153,"url_path":"test1_test1_t11DDD","is_deleted":false},{"id":152,"url_path":"test1_test1_t11121","is_deleted":false},{"id":151,"url_path":"test1_test1_t111","is_deleted":false},{"id":158,"url_path":"DDDDDDDDDDDDDDDDDDDD","is_deleted":false},{"id":157,"url_path":"WWWWWWWWWWWWWWWWWWWW","is_deleted":false},{"id":156,"url_path":"test1_test1_t11ww","is_deleted":false},{"id":155,"url_path":"test1_test1_t11DWW","is_deleted":false},{"id":159,"url_path":"cccccccccccccccccccc","is_deleted":false},{"id":160,"url_path":"____________________","is_deleted":false},{"id":161,"url_path":"__________A_________","is_deleted":false},{"id":162,"url_path":"_______SS_A_________","is_deleted":false},{"id":193,"url_path":"tom_tom_tom1","is_deleted":false},{"id":163,"url_path":"_______SS_AAAAAAAAAA","is_deleted":false},{"id":164,"url_path":"WWWWWWWWWWWWWWWWWWWW","is_deleted":false},{"id":113,"url_path":"test1","is_deleted":false},{"id":114,"url_path":"test1_test1","is_deleted":false}]},"tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":1,"user_name":"test1","sex":1,"birthdate":"1980-02-01 00:00:00","nation_id":1,"hometown":4403,"user_source":0,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":1,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"深圳市埃斯欧纳信息咨询有限公司","current_post":"市场公关总监","head_img_path":"","img_server_id":0}}}}}
+
+								</pre>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

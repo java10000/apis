@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Aceona Open Platform</title>
+		<link href="/css/main.css" rel="stylesheet" type="text/css" />
+		<link href="/css/api.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.js" type="text/javascript"></script>
+		<script src="/js/public/jquery.syntax.cache.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			$(function() {
+				 //$('#xml').text($('#xmlC').html());
+				
+				 jQuery.syntax();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="api-content">
+			<div class="doc-content apitype">
+				<div class="doc-hd">
+					用户API
+					<h1 class="level-1">
+						<b></b> aceona.user.search 用户信息检索
+					</h1>
+					
+				</div>
+				<div class="doc-bd" style="height: 296px; width: 1220px; top: 89px;">
+					
+					<div class="section">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_des">
+								<span class="handle"></span>简要描述
+							</h2>
+						</div>
+						<div class="bd">
+							<p>
+								用户信息检索
+							</p>
+						</div>
+					</div>
+					<div class="section" id="sysparams">
+						<div class="hd">
+							<a>&nbsp;</a>
+							<h2 id="J_sysparam">
+								<span class="handle"></span>系统级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table border="1" class="para_table">
+								<thead>
+									<tr>
+										<th>
+											名称
+										</th>
+										<th>
+											类型
+										</th>
+										<th>
+											是否必需
+										</th>
+										<th>
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											method
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											API接口名称
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											timestamp
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2008-01-25
+											20:23:30。
+										</td>
+									</tr>
+									<tr>
+										<td>
+											format
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											否
+										</td>
+										<td>
+											可选，指定响应格式。默认json,目前支持格式为xml,json
+										</td>
+									</tr>
+									<tr>
+										<td>
+											app_key
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的AppKey
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											sign
+										</td>
+										<td>
+											String
+										</td>
+										<td>
+											是
+										</td>
+										<td>
+											分配给应用的授权密钥
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_appparam">
+								<span class="handle"></span>应用级输入参数
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="15%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="25%">
+											描述
+										</th>
+										<th width="15%">
+											示例值
+										</th>
+										<th width="15%">
+											默认值
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>q</td><td>String</td><td>必须</td><td>搜索条件</td><td>深圳</td><td></td>
+									</tr>
+									<tr>
+										<td>page_no</td><td>Integer</td><td>必须</td><td>页数</td><td>1</td><td></td>
+									</tr>
+									<tr>
+										<td>page_size</td><td>Integer</td><td>必须</td><td>单页返回数据数目</td><td>15</td><td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>返回结果
+							</h2>
+						</div>
+						<div class="bd">
+							<table class="para_table">
+								<thead>
+									<tr>
+										<th width="20%">
+											名称
+										</th>
+										<th width="15%">
+											类型
+										</th>
+										<th width="15%">
+											是否必须
+										</th>
+										<th width="20%">
+											示例值
+										</th>
+										<th width="30%">
+											描述
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											UserSearchResponse
+										</td>
+										<td>
+											<a href="/model/User.html">User</a>
+										</td>
+										<td>
+											是
+										</td>
+										<td></td>
+										<td>
+											用户信息
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_result">
+								<span class="handle"></span>Java调用代码
+							</h2>
+						</div>
+						<div class="bd">
+							<pre class="syntax brush-java">
+		AceonaClient client = new DefaultAceonaClient(Constants.AOP_SERVER_URL,"aceoner","SH!!!!!!!!!!!!!!!!");
+		UsersSearchRequest req = new UsersSearchRequest();
+		req.setPageNo(0L);
+		req.setPageSize(15L);
+		//accounts.login_name:'2aceona@aceona.com' 搜索login_name为2aceona@aceona.com
+		//(accounts.login_name:'*@aceona.com' && user_type:'2') 搜索后缀为@aceona.com并且user_type为2的用户
+		//(accounts.login_name:'*@aceona.com' && user_type:'2') || addresses.address:'深圳' 搜索后缀为@aceona.com并且user_type为2的用户，或者addresses.address中有深圳的用户
+		//(accounts.login_name:'*@aceona.com' && user_type:'2') && accounts.update_time:['20100101':'20121212'] 搜索后缀为@aceona.com并且user_type为2的用户,并且在update_time指定的时间段类
+		//(accounts.login_name:'*@aceona.com' && user_type:'2') - accounts.login_name:'2aceona@aceona.com' 搜索后缀为@aceona.com并且user_type为2的所有用户，但是要排除掉2aceona@aceona.com
+		//(user_type:[0,2])获取0到2的数据
+		//(user_type:{0,2])获取1、2的数据 {}为排除，[]为包含，可以组合使用
+		
+		req.setQ("accounts.login_name:'2aceona@aceona.com'");
+		
+		try {
+			UserSearchResponse res = client.execute(req);
+			System.out.println(res.getBody());			
+			System.out.println(res.getElements());
+			System.out.println(res.isSuccess());
+			if(res.getElements()!=null){
+				for(User user : res.getElements()){
+					System.out.println(user.getId());
+				}
+			}
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println("ERROR!");
+		} 
+							</pre>
+						</div>
+					</div>
+					<div class="section">
+						<div class="hd">
+							<h2 id="J_example">
+								<span class="handle"></span>返回示例
+							</h2>
+						</div>
+						<div class="bd">
+							<div class="code-section">
+								<strong>XML数据格式: </strong>
+								<pre id="xml" class="syntax xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;UserUpdateResponse&gt;&lt;user_id&gt;1&lt;/user_id&gtl;&lt;/UserUpdateResponse&gt;
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><UserSearchResponse><page_no>0</page_no><page_size>15</page_size><total_page>650</total_page><numberOfElements>15</numberOfElements><total_elements>9744</total_elements><elements><element><id>92070</id><create_time>2010-05-28 10:31:56</create_time><create_by>92070</create_by><update_by>92070</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>91354</id><login_name>92070aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>91354</id><user_name>test92070</user_name><sex>1</sex><birthdate>1983-09-28 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>91354</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>集团客户经理</current_corp><current_post>深圳移动</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>68905</id><create_time>2010-05-04 16:20:44</create_time><create_by>68905</create_by><update_by>68905</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>68406</id><login_name>68905aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>68406</id><user_name>test68905</user_name><sex>1</sex><birthdate>1983-05-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>68406</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>深圳市富士康</current_corp><current_post>深圳市富士康</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>49082</id><create_time>2010-04-13 13:50:19</create_time><create_by>49082</create_by><update_by>49082</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>48856</id><login_name>49082aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>48856</id><user_name>test49082</user_name><sex>1</sex><birthdate>1969-04-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>48856</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>上海聚盟传媒深圳分公司</current_corp><current_post>深圳区总监</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>78185</id><create_time>2010-05-14 16:55:35</create_time><create_by>78185</create_by><update_by>78185</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>77623</id><login_name>78185aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>77623</id><user_name>test78185</user_name><sex>1</sex><birthdate>1976-06-10 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>77623</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>上海杰豹快运深圳分公司</current_corp><current_post>深圳分公司经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>16937</id><create_time>2009-12-31 14:22:00</create_time><create_by>16937</create_by><update_by>16937</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>16858</id><login_name>16937aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>16858</id><user_name>test16937</user_name><sex>1</sex><birthdate>1971-03-06 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>16858</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>SanDisk 升达（香港）有限公司，深圳代表处</current_corp><current_post>深圳市，布吉镇</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>51240</id><create_time>2010-04-15 10:11:22</create_time><create_by>51240</create_by><update_by>51240</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>51005</id><login_name>51240aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>51005</id><user_name>test51240</user_name><sex>1</sex><birthdate>1983-01-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>51005</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>深圳市康哲药业有限公司</current_corp><current_post>深圳地区    地区经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>57750</id><create_time>2010-04-21 13:06:27</create_time><create_by>57750</create_by><update_by>57750</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>57438</id><login_name>57750aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>57438</id><user_name>test57750</user_name><sex>1</sex><birthdate>1976-06-08 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>57438</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>雀巢（中国）有限公司深圳分公司</current_corp><current_post>深圳销售经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>59344</id><create_time>2010-04-22 10:52:43</create_time><create_by>59344</create_by><update_by>59344</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>59009</id><login_name>59344aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>59009</id><user_name>test59344</user_name><sex>1</sex><birthdate>1978-08-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>59009</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>浙江丁豪集团有限公司深圳分公司</current_corp><current_post>深圳分公司经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>88873</id><create_time>2010-05-25 16:03:45</create_time><create_by>88873</create_by><update_by>88873</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>88178</id><login_name>88873aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>88178</id><user_name>test88873</user_name><sex>1</sex><birthdate>1982-07-13 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>88178</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>珠海佳弘科技深圳办事处(150-500人 )</current_corp><current_post>深圳办事处经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>23151</id><create_time>2010-01-18 10:00:41</create_time><create_by>23151</create_by><update_by>23151</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>23014</id><login_name>23151aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>23014</id><user_name>test23151</user_name><sex>1</sex><birthdate>1970-01-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>23014</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>深圳MBH贸易公司</current_corp><current_post>深圳MBH贸易公司</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>305</id><create_time>2009-09-03 10:51:28</create_time><create_by>305</create_by><update_by>305</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>305</id><login_name>305aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_time>2009-11-09 04:47:42</last_login_time><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>305</id><user_name>test305</user_name><sex>1</sex><birthdate>1978-03-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>1</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>305</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>LG移动事业部</current_corp><current_post>深圳销售经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>15946</id><create_time>2009-12-29 16:29:26</create_time><create_by>15946</create_by><update_by>15946</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>15867</id><login_name>15946aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>15867</id><user_name>test15946</user_name><sex>1</sex><birthdate>1979-02-11 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>15867</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>苏州科达科技有限公司</current_corp><current_post>深圳区域经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>20112</id><create_time>2010-01-11 09:23:06</create_time><create_by>20112</create_by><update_by>20112</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>19979</id><login_name>20112aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>19979</id><user_name>test20112</user_name><sex>1</sex><birthdate>1970-09-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>19979</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>广东佛山宜禾陶瓷有限公司</current_corp><current_post>深圳区域经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>23273</id><create_time>2010-01-18 11:51:49</create_time><create_by>23273</create_by><update_by>23273</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>23136</id><login_name>23273aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>23136</id><user_name>test23273</user_name><sex>1</sex><birthdate>1968-01-01 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>23136</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>北京博士伦眼睛护理产品有限公司</current_corp><current_post>深圳地区销售主任</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element><element><id>23490</id><create_time>2010-01-18 16:31:35</create_time><create_by>23490</create_by><update_by>23490</update_by><user_type>2</user_type><is_deleted>false</is_deleted><is_enabled>true</is_enabled><is_expired>false</is_expired><is_locked>false</is_locked><accounts><account><id>23352</id><login_name>23490aceona@aceona.com</login_name><password>jdz/OoD0GJyhydTZAsPJCQ==</password><account_type>1</account_type><last_login_ip>0</last_login_ip><is_deleted>false</is_deleted></account></accounts><messengers/><privacies/><profiles/><tags/><third_parties/><addresses/><baseInfos><baseInfo><id>23352</id><user_name>test23490</user_name><sex>1</sex><birthdate>1976-12-13 00:00:00</birthdate><nation_id>1</nation_id><hometown>4403</hometown><user_source>2</user_source><language><id>1</id><code>CN</code><name>简体中文</name></language></baseInfo></baseInfos><infos><info><id>23352</id><language><id>1</id><code>CN</code><name>简体中文</name></language><city_id>4403</city_id><relationship_status>0</relationship_status><mobile>15858585858</mobile><current_corp>Whirlpool</current_corp><current_post>深圳办事处经理</current_post><head_img_path></head_img_path><img_server_id>0</img_server_id></info></infos></element></elements></UserSearchResponse>
+
+				</pre>
+							</div>
+							<div class="code-section">
+								<strong>JSON数据格式: </strong>
+								<pre class="syntax brush-bash">
+								{"UserSearchResponse":{"page_no":0,"page_size":15,"total_page":650,"numberOfElements":15,"total_elements":9744,"elements":{"element":[{"id":92070,"create_time":"2010-05-28 10:31:56","create_by":92070,"update_by":92070,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":91354,"login_name":"92070aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":91354,"user_name":"test92070","sex":1,"birthdate":"1983-09-28 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":91354,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"集团客户经理","current_post":"深圳移动","head_img_path":"","img_server_id":0}}},{"id":68905,"create_time":"2010-05-04 16:20:44","create_by":68905,"update_by":68905,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":68406,"login_name":"68905aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":68406,"user_name":"test68905","sex":1,"birthdate":"1983-05-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":68406,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"深圳市富士康","current_post":"深圳市富士康","head_img_path":"","img_server_id":0}}},{"id":49082,"create_time":"2010-04-13 13:50:19","create_by":49082,"update_by":49082,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":48856,"login_name":"49082aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":48856,"user_name":"test49082","sex":1,"birthdate":"1969-04-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":48856,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"上海聚盟传媒深圳分公司","current_post":"深圳区总监","head_img_path":"","img_server_id":0}}},{"id":78185,"create_time":"2010-05-14 16:55:35","create_by":78185,"update_by":78185,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":77623,"login_name":"78185aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":77623,"user_name":"test78185","sex":1,"birthdate":"1976-06-10 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":77623,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"上海杰豹快运深圳分公司","current_post":"深圳分公司经理","head_img_path":"","img_server_id":0}}},{"id":16937,"create_time":"2009-12-31 14:22:00","create_by":16937,"update_by":16937,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":16858,"login_name":"16937aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":16858,"user_name":"test16937","sex":1,"birthdate":"1971-03-06 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":16858,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"SanDisk 升达（香港）有限公司，深圳代表处","current_post":"深圳市，布吉镇","head_img_path":"","img_server_id":0}}},{"id":51240,"create_time":"2010-04-15 10:11:22","create_by":51240,"update_by":51240,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":51005,"login_name":"51240aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":51005,"user_name":"test51240","sex":1,"birthdate":"1983-01-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":51005,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"深圳市康哲药业有限公司","current_post":"深圳地区    地区经理","head_img_path":"","img_server_id":0}}},{"id":57750,"create_time":"2010-04-21 13:06:27","create_by":57750,"update_by":57750,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":57438,"login_name":"57750aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":57438,"user_name":"test57750","sex":1,"birthdate":"1976-06-08 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":57438,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"雀巢（中国）有限公司深圳分公司","current_post":"深圳销售经理","head_img_path":"","img_server_id":0}}},{"id":59344,"create_time":"2010-04-22 10:52:43","create_by":59344,"update_by":59344,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":59009,"login_name":"59344aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":59009,"user_name":"test59344","sex":1,"birthdate":"1978-08-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":59009,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"浙江丁豪集团有限公司深圳分公司","current_post":"深圳分公司经理","head_img_path":"","img_server_id":0}}},{"id":88873,"create_time":"2010-05-25 16:03:45","create_by":88873,"update_by":88873,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":88178,"login_name":"88873aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":88178,"user_name":"test88873","sex":1,"birthdate":"1982-07-13 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":88178,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"珠海佳弘科技深圳办事处(150-500人 )","current_post":"深圳办事处经理","head_img_path":"","img_server_id":0}}},{"id":23151,"create_time":"2010-01-18 10:00:41","create_by":23151,"update_by":23151,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":23014,"login_name":"23151aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":23014,"user_name":"test23151","sex":1,"birthdate":"1970-01-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":23014,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"深圳MBH贸易公司","current_post":"深圳MBH贸易公司","head_img_path":"","img_server_id":0}}},{"id":305,"create_time":"2009-09-03 10:51:28","create_by":305,"update_by":305,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":305,"login_name":"305aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_time":"2009-11-09 04:47:42","last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":305,"user_name":"test305","sex":1,"birthdate":"1978-03-01 00:00:00","nation_id":1,"hometown":4403,"user_source":1,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":305,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"LG移动事业部","current_post":"深圳销售经理","head_img_path":"","img_server_id":0}}},{"id":15946,"create_time":"2009-12-29 16:29:26","create_by":15946,"update_by":15946,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":15867,"login_name":"15946aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":15867,"user_name":"test15946","sex":1,"birthdate":"1979-02-11 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":15867,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"苏州科达科技有限公司","current_post":"深圳区域经理","head_img_path":"","img_server_id":0}}},{"id":20112,"create_time":"2010-01-11 09:23:06","create_by":20112,"update_by":20112,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":19979,"login_name":"20112aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":19979,"user_name":"test20112","sex":1,"birthdate":"1970-09-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":19979,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"广东佛山宜禾陶瓷有限公司","current_post":"深圳区域经理","head_img_path":"","img_server_id":0}}},{"id":23273,"create_time":"2010-01-18 11:51:49","create_by":23273,"update_by":23273,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":23136,"login_name":"23273aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":23136,"user_name":"test23273","sex":1,"birthdate":"1968-01-01 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":23136,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"北京博士伦眼睛护理产品有限公司","current_post":"深圳地区销售主任","head_img_path":"","img_server_id":0}}},{"id":23490,"create_time":"2010-01-18 16:31:35","create_by":23490,"update_by":23490,"user_type":2,"is_deleted":false,"is_enabled":true,"is_expired":false,"is_locked":false,"accounts":{"account":{"id":23352,"login_name":"23490aceona@aceona.com","password":"jdz\/OoD0GJyhydTZAsPJCQ==","account_type":1,"last_login_ip":0,"is_deleted":false}},"messengers":"","privacies":"","profiles":"","tags":"","third_parties":"","addresses":"","baseInfos":{"baseInfo":{"id":23352,"user_name":"test23490","sex":1,"birthdate":"1976-12-13 00:00:00","nation_id":1,"hometown":4403,"user_source":2,"language":{"id":1,"code":"CN","name":"简体中文"}}},"infos":{"info":{"id":23352,"language":{"id":1,"code":"CN","name":"简体中文"},"city_id":4403,"relationship_status":0,"mobile":15858585858,"current_corp":"Whirlpool","current_post":"深圳办事处经理","head_img_path":"","img_server_id":0}}}]}}}
+
+								</pre>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

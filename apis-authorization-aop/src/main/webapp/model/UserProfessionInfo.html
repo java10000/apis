@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+  <title>Aceona Open Platform</title>  
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/api.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+	<div class="api-content">
+	<div class="doc-hd">
+		专业用户信息
+		<h1>UserProfessionInfo</h1>
+	</div>
+	<div class="doc-bd" style="height: 326px; width: 1220px; top: 59px;">
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>所属类目</h2>	
+			</div>
+			<div class="bd">
+               <p>用户API</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>简要描述</h2>	
+			</div>
+			<div class="bd">
+				<p>专业用户信息</p>
+			</div>
+		</div>
+		<div class="section">
+			<div class="hd">
+				<h2><span class="handle"></span>属性</h2>
+			</div>
+			<div class="bd">
+				<table class="para_table">
+					<thead>
+						<tr>
+						  <th width="15%">名称</th>
+						  <th width="15%">对象属性</th>
+                          <th width="10%">类型</th>
+                          <th width="10%">是否隐私</th>
+                          <th width="20%">示例值</th>
+                          <th width="30%">描述</th>
+						</tr>
+					</thead>
+					<tbody>
+                         <tr  class="">
+							<td>id</td>
+							<td>id</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>主键</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_time</td>
+							<td>dateAdded</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>创建时间</td>
+						</tr>
+                         <tr  class="">
+							<td>update_time</td>
+							<td>lastModified</td>
+			                  <td> java.util.Date</td>
+				              <td>否</td>
+				              <td>2011-01-01 12:00:01</td>
+			                  <td>修改时间</td>
+						</tr>
+                         <tr  class="odd">
+							<td>create_by</td>
+							<td>createBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>创建人</td>
+						</tr>
+                         <tr  class="">
+							<td>update_by</td>
+							<td>lastModifyBy</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>修改人</td>
+						</tr>
+                         <tr  class="odd">
+							<td>user_id</td>
+							<td>userId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>用户ID</td>
+						</tr>
+                         <tr  class="">
+							<td>msn_no</td>
+							<td>msn</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>MSN账号</td>
+						</tr>
+                         <tr  class="odd">
+							<td>qq</td>
+							<td>qq</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>QQ账号</td>
+						</tr>
+                         <tr  class="">
+							<td>position_id</td>
+							<td>positionId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>内部职务ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>company_name</td>
+							<td>companyName</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>现在职公司名</td>
+						</tr>
+                         <tr  class="">
+							<td>corp_type_id</td>
+							<td>corpTypeId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>现在职企业类型ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>corpType</td>
+							<td>corpType</td>
+			                  <td><a href="DicCorpType.html">DicCorpType</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>现在职企业类型</td>
+						</tr>
+                         <tr  class="">
+							<td>success_case_id</td>
+							<td>successCaseId</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>成功案例年薪范围ID</td>
+						</tr>
+                         <tr  class="odd">
+							<td>address</td>
+							<td>address</td>
+			                  <td> java.lang.String</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>通信地址</td>
+						</tr>
+                         <tr  class="">
+							<td>hunting_age</td>
+							<td>huntingAge</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>猎头年限</td>
+						</tr>
+                         <tr  class="odd">
+							<td>professionGoodDomainMaps</td>
+							<td>professionGoodDomainMaps</td>
+			                  <td><a href="ProfessionGoodDomainMap.html">java.util.List&lt;ProfessionGoodDomainMap&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>擅长行业</td>
+						</tr>
+                         <tr  class="">
+							<td>professionGoodJobMaps</td>
+							<td>professionGoodJobMaps</td>
+			                  <td><a href="ProfessionGoodJobMap.html">java.util.List&lt;ProfessionGoodJobMap&gt;</a></td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>擅长职位</td>
+						</tr>
+                         <tr  class="odd">
+							<td>main_module</td>
+							<td>mainModule</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>HR主要负责模块</td>
+						</tr>
+                         <tr  class="">
+							<td>profession_type</td>
+							<td>professionType</td>
+			                  <td> java.lang.Long</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>专业用户类型  0 猎头1 HR</td>
+						</tr>
+                         <tr  class="odd">
+							<td>work_year</td>
+							<td>workYear</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>工作年限</td>
+						</tr>
+                         <tr  class="">
+							<td>status</td>
+							<td>status</td>
+			                  <td> java.lang.Integer</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>审核状态 0为未审核，1为审核通过，2为审核未通过</td>
+						</tr>
+                         <tr  class="odd">
+							<td>is_deleted</td>
+							<td>deleted</td>
+			                  <td> java.lang.Boolean</td>
+				              <td>否</td>
+				              <td></td>
+			                  <td>删除标记位</td>
+						</tr>
+                       </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</body>
+		</html>
