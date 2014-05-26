@@ -10,6 +10,6 @@ logging:
     
 auth:
   authorizationServerUrl: http://localhost:8080/v1/tokeninfo
-  secret: 58b749f7-acb3-44b7-a38c-53d5ad740cf6
-  key: university-foo
+  secret: e15d8328-959d-4933-aa03-1db9b1a807c1
+  key: 29310f3f-fe72-450a-afc7-8431e51920ec
    

@@ -184,11 +184,13 @@ public class ClientController {
     String clientSecret = env.getProperty("client_secret");
     String authorizeUrl = env.getProperty("authorize_url");
     String resourceServerApiUrl = env.getProperty("resource_server_api_url");
+    String requestScope = env.getProperty("request_scope");
+    
     ClientSettings settings = new ClientSettings(tokenUri, clientId, clientSecret, authorizeUrl, "step1", resourceServerApiUrl);
     settings.setAuthorizationURLComplete(String.format(
             settings.getAuthorizationURL()
-                    .concat("?response_type=%s&client_id=%s&redirect_uri=%s&scope=read&state=example"), responseType, settings
-            .getOauthKey(), redirectUri));
+                    .concat("?response_type=%s&client_id=%s&redirect_uri=%s&scope=%s&state=example"), responseType, settings
+            .getOauthKey(), redirectUri, requestScope));
     return settings;
 
   }

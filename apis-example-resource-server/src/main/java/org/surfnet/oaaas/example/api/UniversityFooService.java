@@ -50,9 +50,15 @@ public class UniversityFooService extends Service<UniversityFooConfiguration> {
   protected void initialize(UniversityFooConfiguration configuration, Environment environment)
       throws ClassNotFoundException {
     environment.addProvider(new OAuthProvider<AuthenticatedPrincipal>(new OAuthAuthenticator(configuration), "protected-resources"));
+    
+    
     environment.addResource(new UniversityResource());
     // add account resource test [author david]
     environment.addResource(new AccountResource());
+    
+    
+    
+    
   }
 
 }

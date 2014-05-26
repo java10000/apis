@@ -39,7 +39,7 @@
 	<bean id="resourceCache" class="com.varicom.aop.resource.ResourceCache" init-method="init">
 		<property name="wadlUrls">
 			<list>
-				<value>http://172.19.1.104:8010/uc/rest/application.wadl</value>
+				<value>http://localhost:9083/mujina-idp/rest/application.wadl</value>
 <!--				<value>http://172.19.4.191:8080/rest/application.wadl</value>-->
 <!-- 				<value>http://172.19.4.10:8080/acl/rest/application.wadl</value> -->
 			</list>
